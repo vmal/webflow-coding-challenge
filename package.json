@@ -1,0 +1,44 @@
+{
+  "name": "backend-code-challenge",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "UNLICENSED",
+  "scripts": {
+    "start": "node --require @babel/register src/index.js",
+    "start:watch": "nodemon",
+    "start:debug": "node --inspect-brk=5858 @babel/register src/index.js",
+    "test": "jest",
+    "test:watch": "jest --watchAll",
+    "flow": "flow",
+    "lint": "eslint src tests"
+  },
+  "dependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-flow": "^7.0.0",
+    "@babel/register": "^7.4.4",
+    "ajv": "^6.10.2",
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.6.0",
+    "eslint-plugin-eslint-comments": "^3.1.2",
+    "eslint-plugin-flowtype": "^4.3.0",
+    "eslint-plugin-import": "^2.18.2",
+    "express": "^4.17.1",
+    "flow-bin": "^0.111.1",
+    "isomorphic-fetch": "^2.2.1",
+    "jest": "^24.9.0",
+    "nodemon": "^1.19.4",
+    "puppeteer": "^2.1.1"
+  },
+  "jest": {
+    "verbose": false,
+    "testEnvironment": "node"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "*.test.js"
+    ],
+    "exec": "yarn start"
+  }
+}
